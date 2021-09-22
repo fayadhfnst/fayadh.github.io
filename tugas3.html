@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Simple Calculator</title>
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: 'Lato', sans-serif;
+		}
+
+		body {
+			min-height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		div {
+			text-align: center;
+		}
+
+		div h2 {
+			letter-spacing: 3px;
+			text-transform: uppercase;
+			color:olive;
+		}
+
+		div hr {
+			margin: 14px 0;
+			border-color: black;
+		}
+
+		div input[type=number] {
+			margin: 8px 0;
+			padding: 8px;
+			width: 100%;
+			font-size: 16px;
+			color: olive;
+		}
+
+		div input[type=number]:read-only {
+			border: 3px solid #000;
+			background-color: white;
+			color: olive;
+			text-align: center;
+			font-size: 22px;
+			font-weight:bolder;	
+		}
+
+		div button {
+			margin: 0 4px;
+			padding: 6px 0;
+			width: 62px;
+			border: 1px solid olive;
+			background-color: olive;
+			font-size: 16px;
+			font-weight: bold;
+			cursor: pointer;
+			color: white;
+		}
+
+		div button:hover {
+			background-color: olive;
+			box-shadow: 0 0 10px olive, 0 0 10px olive, 0 0 40px olive, 0 0 80px olive;
+		}
+
+		div button:focus {
+			outline: 2px solid #333;
+			outline-style: dashed;
+		}
+		
+	</style>
+</head>
+
+<body background="fresh-milk-585488.jpg" style="background-repeat: no-repeat; background-size: cover;">
+
+
+	<div>
+		<h2>Simple Calc</h2><hr>
+		<input type="number" id="bil1"><br/>
+		<input type="number" id="bil2"><br/>
+		<button id="tambah">+</button>
+		<button id="kurang">-</button>
+		<button id="kali">x</button>
+		<button id="bagi">/</button>
+		<button id="mod">%</button><br/>
+		<input type="number" readonly  id="hasil"/>
+	</div>
+
+<script>
+	let a1 = document.getElementById("bil1")
+	let a2 = document.getElementById("bil2")
+	let h = document.getElementById("hasil")
+
+	 document.getElementById("tambah").addEventListener("click", function() {
+		 h.value = parseInt(a1.value) + parseInt(a2.value)
+	 })
+
+	 document.getElementById("kurang").addEventListener("click", function() {
+		 h.value = parseInt(a1.value) - parseInt(a2.value)
+	 })
+
+	 document.getElementById("kali").addEventListener("click", function() {
+		 h.value = parseInt(a1.value) * parseInt(a2.value)
+	 })
+
+	 document.getElementById("bagi").addEventListener("click", function() {
+		 h.value = parseInt(a1.value) / parseInt(a2.value)
+	 })
+
+	 document.getElementById("mod").addEventListener("click", function() {
+		 h.value = parseInt(a1.value) % parseInt(a2.value)
+	 })
+
+</script>
+
+</body>
+</html>
