@@ -1,0 +1,47 @@
+body {
+    font-family: 'Bebas Neue', cursive;
+}
+
+
+.header .navbar {
+    background-color: white;
+    color: black;
+}
+.main-content .banner{
+    background-image: url('langmal.jpg');
+    background-size: cover;
+    border-radius: 25px;
+    text-align: center;
+}
+.main-content .banner h1{
+    color: gold;
+}
+.main-content .banner p{
+    color: white;
+}
+.card-fitur h4{
+    color: rgb(110 128 253);
+}
+.card-fitur .card{
+    box-shadow: 4px 5px 20px 2px yellow;
+    border-radius: 20px;
+    border-color:yellow;
+}
+
+.card-fitur .card :hover {
+    border-color: gold;
+    border-color: 4px 5px 20px 2px gold;
+}
+
+button {
+    background-color: #FC3D21;
+}
+
+.footer {
+    background-image: url('langmal.jpg');
+    background-size: cover;
+}
+
+.footer .footer-copyright {
+    color: white;
+}
